@@ -123,12 +123,12 @@ haste.prototype.showMessage = function(msg, cls) {
 
 // Show the light key
 haste.prototype.lightKey = function() {
-  this.configureKey(['new', 'save']);
+  this.configureKey(['new', 'save', 'image']);
 };
 
 // Show the full key
 haste.prototype.fullKey = function() {
-  this.configureKey(['new', 'duplicate', 'twitter', 'raw']);
+  this.configureKey(['new', 'duplicate', 'image', 'raw']);
 };
 
 // Set the key up for certain things to be enabled
@@ -309,14 +309,14 @@ haste.prototype.configureButtons = function() {
       }
     },
     {
-      $where: $('#box2 .twitter'),
-      label: 'Twitter',
+      $where: $('#box2 .image'),
+      label: 'Images Drop',
       shortcut: function(evt) {
-        return _this.options.twitter && _this.doc.locked && evt.shiftKey && evt.ctrlKey && evt.keyCode == 84;
+        return _this.doc.locked && evt.shiftKey && evt.ctrlKey && evt.keyCode == 73;
       },
-      shortcutDescription: 'control + shift + t',
+      shortcutDescription: 'control + shift + i',
       action: function() {
-        window.open('https://twitter.com/share?url=' + encodeURI(window.location.href));
+        window.location.href = _this.baseUrl + 'image.html';
       }
     }
   ];

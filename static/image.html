@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Hastebin</title>
+<link rel="stylesheet" type="text/css" href="/solarized_dark.css"/>
+	<link rel="stylesheet" type="text/css" href="/application.css"/>
+	    <style type="text/css" media="screen">
+        body {font:14px Arial, sans-serif; margin:0 auto; width:90%;}
+        #drop_zone {border:2px #fff dashed; padding:25px; text-align:center;
+            -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; color: #fff;}
+        .js #drop_zone {background:#08323C;}
+        .no-js #drop_zone, #drop_zone.highlight {background:#6B848A;}
+	a.logo, #box1 a.logo:visited {
+	display: inline-block;
+	background: url(logo.png);
+	width: 126px;
+	height: 42px;
+	}
+        a {color:#fff;}
+        #list ol {margin:0 0 50px; padding:0 0 40px 20px; color: #fff;}
+        #list ol li {margin:0 0 10px;}
+        #list ol li:after {clear:both; content:""; display:table;} /* clearfix */
+        dl, dt, dd, figure {float:left; margin:0 20px 0 0;}
+        dl, textarea {height:75px;}
+        dl {width:300px;}
+        dt {clear:left; width:100px;}
+        figure {max-width:200px;}
+        .thumb {max-height:75px; max-width:200px;}
+        .textarea {float:right; width:40%;}
+	.doc_url {float:right; width:40%;}
+    </style>
+
+</head>
+<body>
+    <div id="drop_zone"><noscript>JavaScript must be enabled to use the drop zone.</noscript></div>
+    <output id="list"></output>
+    <script type="text/javascript" src="/drop.js"></script>
+</body>
+</html>

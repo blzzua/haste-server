@@ -1,0 +1,22 @@
+version: '3.0'
+services:
+  haste-server:
+    build: .
+    environment:
+      - STORAGE_TYPE=redis
+      - STORAGE_HOST=redis
+      - STORAGE_PORT=6379
+      - STORAGE_DB=0
+    ports:
+      - 7777:7777
+  redis:
+    image: redis:latest
+    environment:
+      - REDIS_DATABASES=1
+    command: ["redis-server", "--maxmemory", "500mb", "--maxmemory-policy", "allkeys-lru"]
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 172.21.0.0/24
